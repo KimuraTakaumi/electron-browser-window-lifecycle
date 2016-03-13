@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <script type="text/javascript">
+        function fullscreen() {
+            var element = document.getElementById("exitFullscreen");
+            if (element.webkitRequestFullScreen) {
+                element.webkitRequestFullScreen();
+            } else if (x.mozRequestFullScreen) {
+                element.mozRequestFullScreen();
+            } else {
+                element.requestFullScreen();
+            }
+        }
+        function exitFullscreen() {
+            if (document.webkitCancelFullScreen) {
+                document.webkitCancelFullScreen();
+            } else if (document.mozCancelFullScreen) {
+                document.mozCancelFullScreen();
+            } else {
+                document.exitFullscreen();
+            }
+        }
+    </script>
+  </head>
+  <body>
+    <h1>Hello World!</h1>
+    <button onclick="fullscreen()">フルスクリーン</button>
+    <button id="exitFullscreen" onclick="exitFullscreen()">フルスクリーン解除</button>
+  </body>
+</html>
